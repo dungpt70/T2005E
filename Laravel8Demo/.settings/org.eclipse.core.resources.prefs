@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//app/Http/Controllers/BookController.php=UTF-8
+encoding//database/migrations/1921_04_11_135600_create_categories_table.php=UTF-8
+encoding//resources/views/book/index.blade.php=UTF-8
+encoding//resources/views/home.blade.php=UTF-8
+encoding//resources/views/layout/footer.blade.php=UTF-8
+encoding//resources/views/layout/header.blade.php=UTF-8
+encoding//routes/web.php=UTF-8
