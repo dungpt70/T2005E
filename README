@@ -1,0 +1,10 @@
+
+- mở file .env cấu hình thông tin kết nối database
+- mở cmd trong project
+- Tạo db: chạy migrate:
+php artisan migrate
+- Start:
+php artisan serve
+
+- Chức năng:
+http://127.0.0.1:8000/product
