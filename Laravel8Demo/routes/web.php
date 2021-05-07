@@ -21,7 +21,7 @@ use App\Http\Controllers\ProductController;
  * */
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('auth');
 /*
  * Uri trả về trang view ( resources/views file home.php hoặc home.blade.php )
  * */
@@ -96,15 +96,13 @@ Route::get("/book/get-detail", [BookController::class, 'getDetail']);
 Route::resource("categories", CategoryController::class);
 */
 // goi toi chuc nang crud quan ly san pham
-Route::resource("product", ProductController::class);
+Route::resource("product", ProductController::class)->middleware('auth');
 
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-
-
-
-
-
-
+Route::get('/test', [App\Http\Controllers\TestController::class, 'index'])->name('test');
 
