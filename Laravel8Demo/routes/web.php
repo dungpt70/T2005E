@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
 use App\Models\eloquen\Product;
 use App\Http\Controllers\ProductController;
 
@@ -19,9 +20,7 @@ use App\Http\Controllers\ProductController;
 /*
  * Uri trả về trang view ( resources/views file welcome.php hoặc welcome.blade.php )
  * */
-Route::get('/', function () {
-    return view('welcome');
-})->middleware('auth');
+Route::get('/', [HomeController::class,'index'])->middleware('auth');
 /*
  * Uri trả về trang view ( resources/views file home.php hoặc home.blade.php )
  * */
@@ -95,8 +94,6 @@ Route::get("/book/get-detail", [BookController::class, 'getDetail']);
 // gọi tới chức crud
 Route::resource("categories", CategoryController::class);
 */
-// goi toi chuc nang crud quan ly san pham
-Route::resource("product", ProductController::class)->middleware('auth');
 
 
 Auth::routes();
