@@ -20,7 +20,7 @@ use App\Http\Controllers\ProductController;
  * Uri trả về trang view ( resources/views file welcome.php hoặc welcome.blade.php )
  * */
 Route::get('/', function () {
-    return view('welcome');
+    return "Hello word";
 })->middleware('auth');
 /*
  * Uri trả về trang view ( resources/views file home.php hoặc home.blade.php )
@@ -95,8 +95,7 @@ Route::get("/book/get-detail", [BookController::class, 'getDetail']);
 // gọi tới chức crud
 Route::resource("categories", CategoryController::class);
 */
-// goi toi chuc nang crud quan ly san pham
-Route::resource("product", ProductController::class)->middleware('auth');
+
 
 
 Auth::routes();
